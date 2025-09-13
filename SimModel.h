@@ -28,6 +28,7 @@ class SimModel {
         }
         poisson=new PoissonFunction(lambda);
     } ;
+
     void getValue() {
         for (int i = 0; i < 10; i++) {
             std::cout << poisson->getValue()<< std::endl;
