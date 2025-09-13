@@ -8,7 +8,7 @@
 
 class Request {
     private:
-    float duration;
+    double duration;
 public:
     explicit Request(double duration) {
         this->duration = duration;

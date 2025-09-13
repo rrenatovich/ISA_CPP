@@ -15,7 +15,7 @@ class SimModel {
     float inpuIntensity; // Интенсивность входящего потока (пуассон)
     std::vector<Node> nodes; // коллекция узлов/фаз
     int nodesCount; // Общее число фаз
-    int finishParam; // Необходимое число выполненных заявок
+    int finishParam{}; // Необходимое число выполненных заявок
     PoissonFunction *poisson;
 
     public:
@@ -24,11 +24,10 @@ class SimModel {
         inpuIntensity = lambda;
         nodesCount = numberOfNodes;
         for (int i = 0; i < numberOfNodes; i++) {
-            nodes.push_back(Node(i,23));
+            nodes.emplace_back(i,23);
         }
         poisson=new PoissonFunction(lambda);
     } ;
-
     void getValue() {
         for (int i = 0; i < 10; i++) {
             std::cout << poisson->getValue()<< std::endl;
