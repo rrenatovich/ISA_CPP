@@ -3,4 +3,8 @@ project(ISA_CPP)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ISA_CPP main.cpp)
+add_executable(ISA_CPP main.cpp
+        SimModel.h
+        Node.h
+        MathFunction.h
+        Request.h)
