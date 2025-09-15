@@ -9,6 +9,7 @@
 class Request {
     private:
     double duration;
+    int nodeID =0;
 public:
     explicit Request(double duration) {
         this->duration = duration;
@@ -18,6 +19,10 @@ public:
     };
     double getDuration() {
         return duration;
+    }
+    int changeNodeID() {
+        this->nodeID = nodeID+1;
+        return nodeID;
     }
 };
 
